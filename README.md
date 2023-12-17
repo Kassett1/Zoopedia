@@ -4,7 +4,7 @@ Zoopedia est mon projet de fin de deuxième année de licence informatique. Il r
 
 ## Fonctionnalités Principales
 
-<img src="readmeImg/accueil.png" alt="page d'accueil de zoopedia" style="width: 50%; height: auto;" />
+<img src="readmeImg/accueil.png" alt="page d'accueil de zoopedia" style="width: 48%; height: auto;" /> <img src="readmeImg/animaux.png" alt="page d'accueil de zoopedia" style="width: 48%; height: auto;" />
 
 - **Page d'Accueil**: Sur la page d'accueil, vous trouverez 5 animaux générés aléatoirement à chaque rafraîchissement de la page, ainsi qu'une petite introduction.
 
