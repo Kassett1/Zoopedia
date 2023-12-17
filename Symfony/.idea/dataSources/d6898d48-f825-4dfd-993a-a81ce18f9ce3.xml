@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="zoopediaBDD@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.0.29</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="mysql"/>
+    <schema id="4" parent="1" name="performance_schema"/>
+    <schema id="5" parent="1" name="sys"/>
+    <schema id="6" parent="1" name="zoopediaBDD">
+      <Current>1</Current>
+    </schema>
+    <table id="7" parent="6" name="animal">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="8" parent="6" name="categorie">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="9" parent="6" name="commentaire">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="10" parent="6" name="doctrine_migration_versions">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_unicode_ci</CollationName>
+    </table>
+    <table id="11" parent="6" name="habitat">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="12" parent="6" name="note">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="13" parent="6" name="regime_alimentaire">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="14" parent="6" name="utilisateur">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="15" parent="7" name="id">
+      <AutoIncrement>21</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="16" parent="7" name="habitat_id">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="17" parent="7" name="regime_id">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="18" parent="7" name="categorie_id">
+      <DasType>int|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="19" parent="7" name="nom">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="20" parent="7" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="21" parent="7" name="image">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="22" parent="7" name="date_creation">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="23" parent="7" name="FK_6AAB231FAFFE2D26">
+      <ColNames>habitat_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>habitat</RefTableName>
+    </foreign-key>
+    <foreign-key id="24" parent="7" name="FK_6AAB231F35E7D534">
+      <ColNames>regime_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>regime_alimentaire</RefTableName>
+    </foreign-key>
+    <foreign-key id="25" parent="7" name="FK_6AAB231FBCF5E72D">
+      <ColNames>categorie_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>categorie</RefTableName>
+    </foreign-key>
+    <index id="26" parent="7" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="27" parent="7" name="IDX_6AAB231FAFFE2D26">
+      <ColNames>habitat_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="28" parent="7" name="IDX_6AAB231F35E7D534">
+      <ColNames>regime_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="29" parent="7" name="IDX_6AAB231FBCF5E72D">
+      <ColNames>categorie_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="30" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="31" parent="8" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="32" parent="8" name="nom">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="33" parent="8" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="34" parent="8" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="36" parent="9" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="37" parent="9" name="animal_id">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="38" parent="9" name="utilisateur_id">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="39" parent="9" name="texte">
+      <DasType>varchar(1000)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="40" parent="9" name="date_creation">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="41" parent="9" name="FK_67F068BC8E962C16">
+      <ColNames>animal_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>animal</RefTableName>
+    </foreign-key>
+    <foreign-key id="42" parent="9" name="FK_67F068BCFB88E14F">
+      <ColNames>utilisateur_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>utilisateur</RefTableName>
+    </foreign-key>
+    <index id="43" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="9" name="IDX_67F068BC8E962C16">
+      <ColNames>animal_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="45" parent="9" name="IDX_67F068BCFB88E14F">
+      <ColNames>utilisateur_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="46" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="47" parent="10" name="version">
+      <DasType>varchar(191)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="48" parent="10" name="executed_at">
+      <DasType>datetime|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="49" parent="10" name="execution_time">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <index id="50" parent="10" name="PRIMARY">
+      <ColNames>version</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="52" parent="11" name="id">
+      <AutoIncrement>5</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="53" parent="11" name="nom">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="54" parent="11" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="55" parent="11" name="image">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <index id="56" parent="11" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="58" parent="12" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="59" parent="12" name="valeur">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="60" parent="12" name="date_creation">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="61" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="63" parent="13" name="id">
+      <AutoIncrement>4</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="64" parent="13" name="nom">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="65" parent="13" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="66" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="68" parent="14" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="69" parent="14" name="nom">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="70" parent="14" name="email">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="71" parent="14" name="mdp">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="72" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="73" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
