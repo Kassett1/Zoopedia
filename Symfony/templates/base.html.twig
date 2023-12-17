@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <h1>Zoopedia</h1>
+    <nav>
+            <li><a href="http://localhost:5173/#/" class="navigation" data-tooltip="Revenir à l'accueil">Accueil</a></li>
+            <li><a href='http://localhost:5173/#/animaux' class="navigation" data-tooltip="Animaux">Animaux</a></li>
+            <li><a href='http://localhost:5173/#/quiz' class="navigation" data-tooltip="Quiz">Quiz</a></li>
+            <li><a href='http://localhost:5173/#/soundBox' class="navigation" data-tooltip="Animaux">SoundBox</a></li>
+            <li><a href={{ path('app_add_animal') }} class="navigation" data-tooltip="Ajout d'animal">Ajouter</a></li>
+    </nav>
+</header>
+{% block body %}{% endblock %}
+</body>
+</html>

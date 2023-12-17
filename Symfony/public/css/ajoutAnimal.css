@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Styles spécifiques à la page ajoutAnimal.css */
+.alert {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+form {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+button.btn {
+    padding: 10px 20px;
+    background-color: #1b79e6;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: #F9A825;
+}
+
+/* Styles hérités du code global */
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 8%;
+    background-color: #1b79e6;
+    font-size: 1.2rem;
+}
+
+header h1 {
+    margin-right: 15%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #F9A825;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 5%;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #F9A825;
+    animation: bounce 0.8s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}

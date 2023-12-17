@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout d'animal{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ajoutAnimal.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    {% for type, message in app.flashes() %}
+        <div class="alert alert-{{ type }}">
+            {{ message|join('<br>') }}
+        </div>
+    {% endfor %}
+
+
+    {{ form_start(form_animal) }}
+    {{ form_widget(form_animal) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_end(form_animal) }}
+
+{% endblock %}

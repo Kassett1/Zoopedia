@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+
+    {% for type, message in app.flashes() %}
+        <div class="alert alert-{{ type }}">
+            {{ message|join('<br>') }}
+        </div>
+    {% endfor %}
+
+
+<h1>Bienvenue sur mon site </h1>
+
+{% endblock %}

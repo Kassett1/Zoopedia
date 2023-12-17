@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ animal.getNom() }}</h1>
+    <img src="{{ asset('images/' ~ animal.getImage()) }}" alt="{{ animal.getNom() }}" style="max-width: 500px;"/>
+    <p>{{ animal.getDescription() }}</p>
+    <p>Habitat: {{ animal.getHabitat().getNom() }}</p>
+    <p>Régime alimentaire: {{ animal.getRegime().getNom() }}</p>
+    <p>Catégorie: {{ animal.getCategorie().getNom() }}</p>
+    <hr>
+    <h2>Commentaires</h2>
+    {% if animal.getCommentaire().isEmpty() %}
+        <p>Aucun commentaire</p>
+    {% else %}
+        {% for commentaire in animal.getCommentaire() %}
+            <div>
+                <h3>{{ commentaire.getTitre() }}</h3>
+                <p>{{ commentaire.getContenu() }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
