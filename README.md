@@ -64,3 +64,9 @@ Pour lancer Zoopedia sur votre machine, assurez-vous que vous avez installé :
    npm run dev
    ```
 Assurez-vous de naviguer sur le site lancé avec "npm run dev" et non avec "symfony server:start".
+
+## Technologies utilisées :
+
+- Symfony
+- VueJs
+- API Platform
